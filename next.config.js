@@ -1,6 +1,8 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
-
-module.exports = nextConfig
+module.exports = {
+  env: {
+    NETLIFY_URL:
+      process.env.NODE_ENV !== 'production'
+        ? 'http://localhost:8888'
+        : 'https://shopify-next.netlify.app',
+  },
+};
