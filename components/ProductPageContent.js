@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { formatPrice } from '../utilityFunctions';
 import { useAppContext } from '../state';
+import Image from 'next/image'
 
 function getCurrentVariantObject(vars, id) {
   return vars.filter((v) => {
@@ -93,7 +94,7 @@ export default function ProductPageContent({ product }) {
   return (
     <section className="product-page-content">
       <div>
-        <img
+        <Image
           src={image.src}
           alt={image.altText}
           className="product-page-image"
